@@ -103,12 +103,60 @@ body{
     color: #fff;
 }
 
-.contenido{
-    flex: 2;
-    display: flex;
-}
 
 a:link, a:visited, a:active {
     text-decoration:none;
 }
+
+.contenido{
+    flex: 4;
+    height: 90vh;
+    display: flex;
+    position: relative;
+}
+
+.contenido .tarjetaIni{
+    display: flex;
+    height: 90%;
+    width: 90%;          
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255,0.7),
+         rgba(255,255,255,0.3)
+        );
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(1rem);
+}
+
+.header{
+   width: 30%;
+   padding: 1em;
+   float: left;
+
+}
+.descripcion{
+    width: 70%;
+    padding: 1em;
+    float: right;
+}
+.header img{
+    margin: 70% 10%;
+    width: auto;
+    height : auto;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .06);
+    transition: .5s;  
+
+}
+
+
+.header:hover img{
+     box-shadow: 0 0 0 20px rgba(0, 0, 0, .1);
+ }
 
