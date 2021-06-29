@@ -27,3 +27,6 @@ main{
     z-index: 2;
     backdrop-filter: blur(2rem);
 }
+.yo {
+    border-radius: 50%;
+  }
