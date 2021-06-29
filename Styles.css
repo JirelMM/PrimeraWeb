@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(
+        to left top, #077AED, #05F7F0
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: f1;
+    src: url(./fonts/fuente1.ttf);
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.glass{
+    background: white;
+    min-height: 90vh;
+    width: 80%;
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255,0.7),
+         rgba(255,255,255,0.3)
+        );
+    border-radius: 2rem;
+    z-index: 0;
+    backdrop-filter: blur(1px);
+    display: flex;
+    
+}
+
+.barra{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255,0.7),
+         rgba(255,255,255,0.3)
+        );
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(1rem);
+
+}
+
+.yo {
+    border-radius: 50%;
+    padding-top: 20px;
+}
+.user{
+    font-family: f1;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.glass .barra ul{
+    font-family: f1;
+    font-size: 18px;
+    font-weight: bold;
+    
+    margin-top: 10%;
+
+}
+
+.glass .barra ul li{
+    margin-top: 10%;
+    padding: 15px;
+
+    
+}    
+  
+.glass .barra ul li a{
+    color: #000000;
+    display: block;
+}
+  
+.glass .barra ul li a .fas{
+    width: 25px;
+}
+  
+.glass .barra ul li:hover{
+    background-color: #077AED;
+}
+      
+.glass .barra ul li:hover a{
+    color: #fff;
+}
+
+.contenido{
+    flex: 2;
+    display: flex;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
