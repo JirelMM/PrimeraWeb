@@ -8,7 +8,7 @@ body{
     padding: 0;
     min-height: 100vh;
     background: linear-gradient(
-        to left top, #077AED, #05F7F0
+        to left top, #000000, #447ab8
         );
     display: flex;
     align-items: center;
@@ -52,11 +52,7 @@ body{
 }
 
 .yo{
-    background: linear-gradient(
-        to right bottom,
-         rgba(255,255,255,0.7),
-         rgba(255,255,255,0.3)
-        );
+    background: #bedbfc70;
     z-index: 3;
     backdrop-filter: blur(20px);
     border-top-left-radius: 20px;
@@ -72,11 +68,7 @@ body{
 }
 
 .nav{
-    background: linear-gradient(
-        to right bottom,
-         rgba(255,255,255,0.3),
-         rgba(255,255,255,0.3)
-        );
+    background: #bedbfc70;
     z-index: 3;
     backdrop-filter: blur(20px);
     border-bottom-left-radius: 20px;
@@ -87,11 +79,9 @@ body{
 }
 
 .contenido{
-    background: linear-gradient(
-        to right bottom,
-         rgba(255,255,255,0.7),
-         rgba(255,255,255,0.3)
-        );
+    background:
+       #c4dcf19d ;
+        
     z-index: 3;
     backdrop-filter: blur(1rem);
     border-radius: 20px;
@@ -115,8 +105,8 @@ body{
 }
 
 .glass .nav ul li{
-    margin-top: 10%;
-    padding: 1rem;  
+    margin-top: 5%;
+    padding: 1.5rem;  
 }    
   
 .glass .nav ul li a{
@@ -129,7 +119,7 @@ body{
 }
   
 .glass .nav ul li:hover{
-    background-color: #077AED;
+    background-color: #1c426d;
 }
       
 .glass .nav ul li:hover a{
@@ -139,4 +129,17 @@ body{
 
 a:link, a:visited, a:active {
     text-decoration:none;
+}
+
+@media only screen and (max-width: 550px){
+
+    .glass{
+        grid-template-columns: 1fr;
+	    grid-template-rows: 1fr 1fr  2fr;
+        grid-template-areas: 
+        "yo"
+        "nav"
+    
+        "contenido";
+    }
 }
