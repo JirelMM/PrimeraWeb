@@ -86,12 +86,18 @@ body{
     backdrop-filter: blur(1rem);
     border-radius: 20px;
     grid-area: contenido;
+    font-family: f1;
+    font-size: 18px;
+    font-weight: bold;
+
 }
 
 .yo img{
     width: 10rem;
     border-radius: 50%;
     padding-top: 1.5rem;
+    box-shadow:#000000 20px;
+    
 }
 
 .glass .nav ul{
@@ -106,15 +112,15 @@ body{
 
 .glass .nav ul li{
     margin-top: 5%;
-    padding: 1.5rem;  
+    padding: .8rem;  
 }    
   
-.glass .nav ul li a{
+.glass .nav ul li p{
     color: #000000;
     display: block;
 }
   
-.glass .nav ul li a .fas{
+.glass .nav ul li p .fas{
     width: 25px;
 }
   
@@ -122,15 +128,46 @@ body{
     background-color: #1c426d;
 }
       
-.glass .nav ul li:hover a{
+.glass .nav ul li:hover p{
     color: #fff;
 }
 
 
-a:link, a:visited, a:active {
+a:link, a:visited, p:active {
     text-decoration:none;
 }
 
+.glass .contenido h2{
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.glass .contenido p{
+    margin: 0rem 4rem; 
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#escu {
+    padding: 10px;
+    float: left;
+    width: 45%;
+    text-align: justify;
+    font-family: f1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#curs{
+    padding: 10px;
+    float: right;
+    width: 45%;
+    text-align: justify;
+    font-family: f1;
+    font-size: 15px;
+    font-weight: bold;
+}
 @media only screen and (max-width: 550px){
 
     .glass{
