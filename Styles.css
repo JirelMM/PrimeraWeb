@@ -42,88 +42,81 @@ body{
     backdrop-filter: blur(1px);
     display: grid;
 	grid-gap: 0px;
-	grid-template-columns: 1fr .1fr 2fr .1fr;
+	grid-template-columns: 0.7fr .1fr 2fr .1fr;
 	grid-template-rows: .1fr .4fr .8fr .1fr;
     grid-template-areas: 
-    "yo t1 t1 t1"
-    "yo l1 contenido l2"
+    "nav t1 t1 t1"
+    "nav l1 contenido l2"
     "nav l1 contenido l2"
     "nav t2 t2 t2"
 }
 
-.yo{
-    background: #bedbfc70;
-    z-index: 3;
-    backdrop-filter: blur(20px);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    grid-area: yo;
 
+.yo{
+    text-transform: uppercase;
+    font-weight: 500;
     font-family: f1;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
- 
-
 }
 
 .nav{
+    
     background: #bedbfc70;
     z-index: 3;
     backdrop-filter: blur(20px);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     z-index: 3;
     grid-area: nav;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3)
+    
 
 }
 
 .contenido{
-    background:
-       #c4dcf19d ;
-        
-    z-index: 3;
+    
+    background: #c4dcf19d ;
     backdrop-filter: blur(1rem);
     border-radius: 20px;
     grid-area: contenido;
-    font-family: f1;
-    font-size: 18px;
-    font-weight: bold;
-
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
 }
 
 .yo img{
+    margin-top: 20px;
     width: 10rem;
     border-radius: 50%;
-    padding-top: 1.5rem;
-    box-shadow:#000000 20px;
+    border: rgba(255, 255, 255, 0.438) 1px solid;
+    box-shadow: 0px 0px 30px -5px #000;
     
 }
 
-.glass .nav ul{
+.glass .nav ul{   
     font-family: f1;
     font-size: 18px;
     font-weight: bold;
     padding-left: 0%;
     text-align: center;
-
-
 }
 
 .glass .nav ul li{
     margin-top: 5%;
-    padding: .8rem;  
+    padding: .8rem; 
+    text-transform: uppercase;
+
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    cursor: pointer; 
 }    
   
 .glass .nav ul li p{
     color: #000000;
     display: block;
 }
-  
-.glass .nav ul li p .fas{
-    width: 25px;
-}
-  
+   
 .glass .nav ul li:hover{
     background-color: #1c426d;
 }
@@ -132,10 +125,20 @@ body{
     color: #fff;
 }
 
+.glass .nav ul li.active {
+   width: 105%;
 
-a:link, a:visited, p:active {
-    text-decoration:none;
 }
+.glass .nav ul li.active{
+
+    background-image: linear-gradient(to right, #1c426d 0%, #1c426de1 90%);
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.616);
+}
+.glass .nav ul li.active p {
+    color: #fff;
+ 
+}
+
 
 .glass .contenido h2{
     text-align: center;
@@ -143,38 +146,74 @@ a:link, a:visited, p:active {
 
 }
 
-.glass .contenido p{
-    margin: 0rem 4rem; 
-    text-align: center;
-    padding: 1.5rem;
+#contTarIni{
+    margin: 30px 30px;
+    font-family: f1;
+    font-size: 18px;
+    font-weight: bold;    
 }
-
-#escu {
-    padding: 10px;
-    float: left;
-    width: 45%;
+#contTarIni p{
     text-align: justify;
     font-family: f1;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;    
+}
+#escu {
+   padding: 10px;
+    float: left;
+    width: 45%;
+    text-align: center;
+    font-family: f1;
+    font-size: 18px;
     font-weight: bold;
+   
 }
 
 #curs{
     padding: 10px;
     float: right;
     width: 45%;
-    text-align: justify;
+    text-align: center;
     font-family: f1;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
+
+.contTarCono{
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.contTarCono h2{
+    margin: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.programacion {
+    height: 1fr;
+    
+    place-items:  cengter;    
+}
+.iconos{
+    place-content: center;
+}
+
+.g2{
+    height: 1fr;
+
+}
+
 @media only screen and (max-width: 550px){
 
     .glass{
         grid-template-columns: 1fr;
 	    grid-template-rows: 1fr 1fr  2fr;
         grid-template-areas: 
-        "yo"
+    
         "nav"
     
         "contenido";
