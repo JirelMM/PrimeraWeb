@@ -1,10 +1,11 @@
 *{
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
     background: linear-gradient(
         to left top, #077AED, #05F7F0
@@ -30,76 +31,108 @@ body{
 .glass{
     background: white;
     min-height: 90vh;
-    width: 80%;
+    width: 90%;
     background: linear-gradient(
         to right bottom,
          rgba(255,255,255,0.7),
          rgba(255,255,255,0.3)
         );
-    border-radius: 2rem;
+    border-radius: 20px;
     z-index: 0;
     backdrop-filter: blur(1px);
-    display: flex;
-    
+    display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 1fr .1fr 2fr .1fr;
+	grid-template-rows: .1fr .4fr .8fr .1fr;
+    grid-template-areas: 
+    "yo t1 t1 t1"
+    "yo l1 contenido l2"
+    "nav l1 contenido l2"
+    "nav t2 t2 t2"
 }
 
-.barra{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.yo{
     background: linear-gradient(
         to right bottom,
          rgba(255,255,255,0.7),
          rgba(255,255,255,0.3)
         );
-    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(20px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    grid-area: yo;
+
+    font-family: f1;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+ 
+
+}
+
+.nav{
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255,0.3),
+         rgba(255,255,255,0.3)
+        );
+    z-index: 3;
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 3;
+    grid-area: nav;
+
+}
+
+.contenido{
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255,0.7),
+         rgba(255,255,255,0.3)
+        );
     z-index: 3;
     backdrop-filter: blur(1rem);
-
+    border-radius: 20px;
+    grid-area: contenido;
 }
 
-.yo {
+.yo img{
+    width: 10rem;
     border-radius: 50%;
-    padding-top: 20px;
+    padding-top: 1.5rem;
 }
-.user{
+
+.glass .nav ul{
     font-family: f1;
     font-size: 18px;
     font-weight: bold;
-    z-index: 2;
-}
+    padding-left: 0%;
+    text-align: center;
 
-.glass .barra ul{
-    font-family: f1;
-    font-size: 18px;
-    font-weight: bold;
-    
-    margin-top: 10%;
 
 }
 
-.glass .barra ul li{
+.glass .nav ul li{
     margin-top: 10%;
-    padding: 15px;
-
-    
+    padding: 1rem;  
 }    
   
-.glass .barra ul li a{
+.glass .nav ul li a{
     color: #000000;
     display: block;
 }
   
-.glass .barra ul li a .fas{
+.glass .nav ul li a .fas{
     width: 25px;
 }
   
-.glass .barra ul li:hover{
+.glass .nav ul li:hover{
     background-color: #077AED;
 }
       
-.glass .barra ul li:hover a{
+.glass .nav ul li:hover a{
     color: #fff;
 }
 
@@ -107,62 +140,3 @@ body{
 a:link, a:visited, a:active {
     text-decoration:none;
 }
-
-.contenido{
-    flex: 4;
-    height: 90vh;
-    display: flex;
-    position: relative;
-}
-
-.contenido .tarjetaIni{
-    display: flex;
-    height: 90%;
-    width: 90%;          
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    background: linear-gradient(
-        to right bottom,
-         rgba(255,255,255,0.7),
-         rgba(255,255,255,0.3)
-        );
-    border-radius: 2rem;
-    z-index: 3;
-    backdrop-filter: blur(1rem);
-}
-
-.header{
-   width: 30%;
-   padding: 1em;
-   
-
-}
-.descripcion{
-    width: 70%;
-    padding: 1em;
-   
-}
-.header img{
-    margin: 70% 10%;
-    width: auto;
-    height : auto;
-    max-height: 90%;
-    max-width: 90%;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(0, 0, 0, .06);
-    transition: .5s;  
-
-}
-
-@media (max-width:800px){
-
-    .contenido .tarjetaIni{
-        display: block;
-    }
-}
-
-.header:hover img{
-     box-shadow: 0 0 0 20px rgba(0, 0, 0, .1);
- }
-
