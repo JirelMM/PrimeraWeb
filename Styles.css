@@ -141,16 +141,24 @@ body{
 
 
 .glass .contenido h2{
+
     text-align: center;
     font-size: 1.5rem;
 
 }
 
 #contTarIni{
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 30px 30px;
     font-family: f1;
     font-size: 18px;
-    font-weight: bold;    
+    font-weight: bold;   
+    padding: 10px;
 }
 #contTarIni p{
     text-align: center;
@@ -158,8 +166,19 @@ body{
     font-size: 18px;
     font-weight: bold;    
 }
+#contTarIni h2{
+    width: 50%;
+    padding-bottom: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+#edu{
+    width: 100%;
+    height: auto;
+  
+}
 #escu {
-   padding: 10px;
+
     float: left;
     width: 45%;
     text-align: center;
@@ -170,7 +189,7 @@ body{
 }
 
 #curs{
-    padding: 10px;
+
     float: right;
     width: 45%;
     text-align: center;
@@ -193,13 +212,16 @@ body{
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-
+ .programacion, .desarolloWeb, .os{
+     height: 200px;
+ }
 
 /* **** Estilos Conocimiento programacion***** */
 
 .iconosprog{
     display: flex;
     justify-content: center;
+  
 }
 
 .programacion .icons{
@@ -217,6 +239,8 @@ body{
 
 .programacion .icons:hover{
     width: 200px;
+    
+    
 }
 
 .programacion .icons .icon{
@@ -228,8 +252,26 @@ body{
     border-radius: 50px;
     box-sizing: border-box;
     line-height: 60px;
+    transition: all 0.3s ease-out;  
+  }
+
+  .programacion .icons .icon i{
+      
+    font-size: 25px;
+    line-height: 60px;
     transition: all 0.3s ease-out;
   }
+
+.programacion .icons .iconc{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;  
+}
   .programacion .icons:nth-child(1):hover .icon{
     background: #1c426d;
   }
@@ -245,12 +287,7 @@ body{
   .programacion .icons:nth-child(5):hover .icon{
     background: #1c426d;
   }
-  .programacion .icons .icon i{
-      
-    font-size: 25px;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-  }
+  
   .programacion .icons:hover .icon i{
     color: #fff;
   }
@@ -357,6 +394,104 @@ body{
     color: #fff;
   }
   .desarolloWeb .icons:nth-child(5) span{
+    color: #fff;
+}
+
+/*  ***    **** */
+
+.iconosos{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.os .icons{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 20px;
+    overflow: hidden;
+    background: #1c426d60;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+
+.os .icons:hover{
+    width: 200px;
+    
+    
+}
+
+.os .icons .icon{
+    
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;  
+  }
+
+  .os .icons .icon i{
+      
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+
+.os .icons .iconc{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;  
+}
+  .os .icons:nth-child(1):hover .icon{
+    background: #1c426d;
+  }
+  .os .icons:nth-child(2):hover .icon{
+    background: #1c426d;
+  }
+  .os .icons:nth-child(3):hover .icon{
+    background: #1c426d;
+  }
+  .os .icons:nth-child(4):hover .icon{
+    background: #1c426d;
+  }
+  .os .icons:nth-child(5):hover .icon{
+    background: #1c426d;
+  }
+  
+  .os .icons:hover .icon i{
+    color: #fff;
+  }
+  .os .icons span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .os .icons:nth-child(1) span{
+    color: #fff;
+  }
+  .os .icons:nth-child(2) span{
+    color: #fff;
+  }
+  .os .icons:nth-child(3) span{
+    color: #fff;
+  }
+  .os .icons:nth-child(4) span{
+    color: #fff;
+  }
+  .os .icons:nth-child(5) span{
     color: #fff;
 }
 
